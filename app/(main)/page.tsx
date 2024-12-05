@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Navbar } from "@/components/navbar";
+import ScrollToTopButton from "@/components/scroll-to-top-button";
 
 export default function Main() {
   const data = [
@@ -31,7 +32,7 @@ export default function Main() {
             </p>
             <div className="relative z-10 mt-10">
               <Link
-                href="/"
+                href="#quran"
                 className="relative sm:text-lg font-semibold px-10 py-1.5 border-2 border-white text-white overflow-hidden group"
               >
                 <span className="relative z-20 transition-colors duration-300 group-hover:text-black">
@@ -62,7 +63,7 @@ export default function Main() {
           </div>
         </div>
       </section>
-      <section className="px-5 py-12 bg-white">
+      <section id="quran" className="px-5 py-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-0">
             <div className="flex justify-center md:justify-start">
@@ -81,6 +82,7 @@ export default function Main() {
           </div>
         </div>
       </section>
+      <ScrollToTopButton />
     </>
   );
 }
