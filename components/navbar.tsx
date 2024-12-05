@@ -67,7 +67,7 @@ export const Navbar = () => {
           className="md:hidden p-2 text-muted-foreground"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X className="size-6" /> : <Menu className="size-6" />}
+          <Menu className="size-6" />
         </button>
       </div>
       <div
@@ -83,15 +83,15 @@ export const Navbar = () => {
         >
           <X className="h-6 w-6" />
         </button>
-        <ul className="h-full flex flex-col items-center justify-center gap-5 py-10 px-5">
+        <ul className="h-full flex flex-col items-center justify-center gap-8 py-10 px-5">
           {navItems.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
                 className={
                   pathname === item.href
-                    ? "text-xl font-semibold text-primary"
-                    : "text-xl font-semibold hover:text-primary transition duration-200"
+                    ? "text-xl font-bold text-primary"
+                    : "text-xl font-bold hover:text-primary transition duration-200"
                 }
               >
                 {item.label}
