@@ -2,6 +2,15 @@ import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 
 export default function Main() {
+  const data = [
+    { value: 114, label: "سورة" },
+    { value: 30, label: "جزء" },
+    { value: 6236, label: "آية" },
+    { value: 60, label: "حزب" },
+    { value: 86, label: "سورة مكية" },
+    { value: 28, label: "سورة مدنية" },
+  ];
+
   return (
     <>
       <Navbar />
@@ -33,6 +42,25 @@ export default function Main() {
           </div>
         </div>
       </main>
+      <section className="px-5 py-12 bg-[#1f4636]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6">
+            {data.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center gap-3 border-2 xl:border-none p-5"
+              >
+                <h2 className="text-white text-2xl sm:text-3xl font-semibold sm:font-bold">
+                  {item.value}
+                </h2>
+                <p className="text-green-500 text-2xl font-semibold sm:font-bold">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
