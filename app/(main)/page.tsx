@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 
 export default function Main() {
@@ -58,6 +59,25 @@ export default function Main() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      <section className="px-5 py-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-0">
+            <div className="flex justify-center md:justify-start">
+              <Image src="/quran.png" alt="quran" width={320} height={320} />
+            </div>
+            <p className="text-xl text-gray-600">
+              القرآن الكريم هو كتاب عظيم, يُعد مصدر الهداية والإرشاد للمسلمين في
+              جميع أنحاء العالم, انه ليس مجرد كتاب ديني , بل هو كنز من الحكمة
+              والعلم يحتضن في آياته معانٍ عميقة ودروساً لا تنضب .
+              <br />
+              <br />
+              كما يعتبر القرآن الكريم من المعجزات العظيمة والخالدة التي جاءت
+              لتأكيد صدق نبوة سيدنا محمد صل الله عليه وسلم, لذلك هو رسالة من
+              الله عز وجل الى البشرية ترشدهم الى الطريق الصحيح .
+            </p>
           </div>
         </div>
       </section>
