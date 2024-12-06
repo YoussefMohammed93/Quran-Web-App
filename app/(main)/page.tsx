@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
 
@@ -44,7 +45,7 @@ export default function Main() {
           </div>
         </div>
       </main>
-      <section className="px-5 py-12 bg-[#1f4636]">
+      <section className="px-5 py-12 bg-[#1c3f39]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6">
             {data.map((item, index) => (
@@ -52,10 +53,10 @@ export default function Main() {
                 key={index}
                 className="flex flex-col items-center gap-3 border-2 xl:border-none p-5"
               >
-                <h2 className="text-white text-2xl sm:text-3xl font-semibold sm:font-bold">
+                <h2 className="text-white text-2xl font-medium sm:font-bold">
                   {item.value}
                 </h2>
-                <p className="text-green-500 text-2xl font-semibold sm:font-bold">
+                <p className="text-yellow-500 text-2xl font-semibold sm:font-bold">
                   {item.label}
                 </p>
               </div>
@@ -82,6 +83,7 @@ export default function Main() {
           </div>
         </div>
       </section>
+      <Footer />
       <ScrollToTopButton />
     </>
   );
