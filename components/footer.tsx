@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {
   faFacebook,
-  faGithub,
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
@@ -37,13 +36,6 @@ const Footer = () => {
         <FontAwesomeIcon icon={faInstagram} className="text-3xl sm:text-2xl" />
       ),
       className: "text-pink-500 transition",
-    },
-    {
-      href: "",
-      icon: (
-        <FontAwesomeIcon icon={faGithub} className="text-3xl sm:text-2xl" />
-      ),
-      className: "text-black transition",
     },
   ];
 
