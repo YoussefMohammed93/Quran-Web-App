@@ -17,21 +17,21 @@ const Footer = () => {
 
   const socialLinks = [
     {
-      href: "",
+      href: "https://www.facebook.com/profile.php?id=61552702670893",
       icon: (
         <FontAwesomeIcon icon={faFacebook} className="text-3xl sm:text-2xl" />
       ),
       className: "text-sky-500 transition",
     },
     {
-      href: "",
+      href: "https://www.linkedin.com/in/youssef-mohammed-6893a031b/",
       icon: (
         <FontAwesomeIcon icon={faLinkedin} className="text-3xl sm:text-2xl" />
       ),
       className: "text-white transition",
     },
     {
-      href: "",
+      href: "https://www.instagram.com/youssef_mohamed.93",
       icon: (
         <FontAwesomeIcon icon={faInstagram} className="text-3xl sm:text-2xl" />
       ),
@@ -55,7 +55,10 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-white">روابط سريعة</h3>
             <ul className="space-y-2">
               {footerItems.map((item) => (
-                <li key={item.href} className="text-white">
+                <li
+                  key={item.href}
+                  className="text-white hover:text-gray-400 transition duration-200"
+                >
                   <Link href={item.href}>{item.label}</Link>
                 </li>
               ))}
@@ -66,8 +69,15 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-white">تابعنا</h3>
             <ul className="flex gap-x-5">
               {socialLinks.map((link, index) => (
-                <li key={index}>
-                  <Link href={link.href} className={link.className}>
+                <li
+                  key={index}
+                  className="hover:scale-125 transition-all duration-200"
+                >
+                  <Link
+                    href={link.href}
+                    className={link.className}
+                    target="_blank"
+                  >
                     {link.icon}
                   </Link>
                 </li>
@@ -75,7 +85,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="text-center mt-8 text-sm text-gray-300">
+        <div className="text-center mt-8 text-sm text-gray-400">
           <p>© 2024 جميع الحقوق محفوظة</p>
         </div>
       </div>

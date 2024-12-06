@@ -10,7 +10,7 @@ import { AlertTriangle, Loader, Search } from "lucide-react";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
 
 type Surah = {
-  id: number;
+  id: string;
   number: string;
   name_ar: string;
 };
@@ -69,7 +69,7 @@ export default function Quran() {
   return (
     <>
       <Navbar />
-      <main className="relative pt-[88px] pb-12 px-5">
+      <main className="relative py-28 px-5">
         <div className="max-w-7xl mx-auto">
           <div className="relative mb-5">
             <Input
@@ -82,7 +82,7 @@ export default function Quran() {
             <Search className="absolute left-3 top-1.5" />
           </div>
           {filteredSurahs.length === 0 ? (
-            <div className="text-center text-lg text-muted-foreground">
+            <div className="h-[35vh] text-center text-lg text-muted-foreground">
               لا توجد نتائج.
             </div>
           ) : (
@@ -98,7 +98,9 @@ export default function Quran() {
                   <div className="flex items-center justify-between">
                     <h2 className="text-xl font-semibold">{surah.name_ar}</h2>
                     <Button asChild className="text-base">
-                      <Link href="/">قراءة السورة</Link>
+                      <Link href={`/quran/surah/${surah.id}`}>
+                        قراءة السورة
+                      </Link>
                     </Button>
                   </div>
                 </li>
