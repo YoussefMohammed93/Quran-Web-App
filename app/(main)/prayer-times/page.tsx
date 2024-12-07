@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import { useEffect, useState } from "react";
 import { Navbar } from "@/components/navbar";
 import { Skeleton } from "@/components/ui/skeleton";
+import ScrollToTopButton from "@/components/scroll-to-top-button";
 
 function convertTo12HourFormat(time: string): string {
   const [hours, minutes] = time.split(":").map(Number);
@@ -231,6 +232,7 @@ export default function PrayerTimes() {
         </div>
       </main>
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }

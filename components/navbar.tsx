@@ -14,10 +14,9 @@ export const Navbar = () => {
 
   const navItems = [
     { href: "/", label: "الرئيسية" },
-    { href: "/quran", label: "القرآن الكريم" },
     { href: "/prayer-times", label: "مواقيت الصلاة" },
+    { href: "/quran", label: "القرآن الكريم" },
     { href: "/azkar", label: "الأذكار" },
-    { href: "/duas", label: "الأدعية" },
   ];
 
   useEffect(() => {
@@ -33,9 +32,24 @@ export const Navbar = () => {
       }
     };
 
+    const handleBodyOverflow = () => {
+      if (typeof window !== "undefined" && window.innerWidth <= 768) {
+        // Mobile breakpoint
+        if (isOpen) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "auto";
+        }
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    handleBodyOverflow(); // Check on mount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = "auto"; // Ensure overflow is reset on unmount
+    };
+  }, [isOpen]);
 
   return (
     <header

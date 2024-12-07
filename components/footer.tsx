@@ -9,10 +9,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   const footerItems = [
-    { href: "/quran", label: "القرآن الكريم" },
     { href: "/prayer-times", label: "مواقيت الصلاة" },
+    { href: "/quran", label: "القرآن الكريم" },
     { href: "/azkar", label: "الأذكار" },
-    { href: "/duas", label: "الأدعية" },
   ];
 
   const socialLinks = [
@@ -24,18 +23,18 @@ const Footer = () => {
       className: "text-sky-500 transition",
     },
     {
-      href: "https://www.linkedin.com/in/youssef-mohammed-6893a031b/",
-      icon: (
-        <FontAwesomeIcon icon={faLinkedin} className="text-3xl sm:text-2xl" />
-      ),
-      className: "text-white transition",
-    },
-    {
       href: "https://www.instagram.com/youssef_mohamed.93",
       icon: (
         <FontAwesomeIcon icon={faInstagram} className="text-3xl sm:text-2xl" />
       ),
       className: "text-pink-500 transition",
+    },
+    {
+      href: "https://www.linkedin.com/in/youssef-mohammed-6893a031b/",
+      icon: (
+        <FontAwesomeIcon icon={faLinkedin} className="text-3xl sm:text-2xl" />
+      ),
+      className: "text-white transition",
     },
   ];
 
@@ -46,11 +45,10 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-white">حول</h3>
             <p className="text-sm text-white leading-7">
-              مرحباً بكم في موقعنا, حيث تجدون كل ما يخص القرآن الكريم والأدعية
-              ومواقيت الصلاة مع أدوات مميزة تساعدكم على التذكير اليومي بالأذكار.
+              مرحباً بكم في موقعنا, حيث تجدون كل ما يخص القرآن الكريم ومواقيت
+              الصلاة مع أدوات مميزة تساعدكم على التذكير اليومي بالأذكار.
             </p>
           </div>
-
           <div>
             <h3 className="text-xl font-bold mb-4 text-white">روابط سريعة</h3>
             <ul className="space-y-2">
@@ -64,7 +62,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
           <div>
             <h3 className="text-xl font-bold mb-4 text-white">تابعنا</h3>
             <ul className="flex gap-x-5">
