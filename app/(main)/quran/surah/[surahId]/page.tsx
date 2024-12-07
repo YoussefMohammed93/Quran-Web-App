@@ -29,7 +29,6 @@ export default function SurahPage() {
   const router = useRouter();
   const { surahId } = useParams();
 
-  // Ensure surahId is a number
   const surahNumber = parseInt(
     Array.isArray(surahId) ? surahId[0] : surahId || "1"
   );
@@ -40,7 +39,6 @@ export default function SurahPage() {
   useEffect(() => {
     if (!surahId) return;
 
-    // Fetch the surah name dynamically
     const fetchSurahName = async () => {
       try {
         const response = await fetch("https://alquran.vip/APIs/surahs");
@@ -62,7 +60,6 @@ export default function SurahPage() {
       }
     };
 
-    // Fetch Ayahs
     const fetchAyahs = async () => {
       setLoading(true);
       setError(null);
